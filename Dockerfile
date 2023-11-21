@@ -14,9 +14,9 @@ COPY package*.json ./
 RUN npm install
 
 # Install tough-cookie v2.5.0 in a separate directory
-RUN mkdir -p /usr/lib/node-modules/npm/node-modules \
-    && cd /usr/lib/node-modules/npm/node-modules \
-    && npm install tough-cookie@2.5.0
+#RUN mkdir -p /usr/lib/node-modules/npm/node-modules \
+#    && cd /usr/lib/node-modules/npm/node-modules \
+#    && npm install tough-cookie@2.5.0
 
 # Bundle app source
 COPY src/ .
