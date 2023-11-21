@@ -1,14 +1,8 @@
 # Use an official Node runtime as a parent image
-FROM node:14
+FROM node:lts-slim
 
 # Update the package list
 RUN apt-get update
-
-# Install Python 2, Python 3, and OpenSSL
-RUN apt-get install -y python2 python3 openssl
-
-# Optionally, upgrade Python and OpenSSL to the latest versions
-# RUN apt-get upgrade -y python2 python3 openssl
 
 # Set the working directory in the container for your application
 WORKDIR /opt/app-root/src
